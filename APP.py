@@ -9,7 +9,13 @@ import pytz
 st.sidebar.title("Welcome to our Dashboard Project!")
 st.sidebar.write("Contributors: Nikoletta Protopapa, Christos Mattheou")
 st.sidebar.write("APIS used : OpenWeatherMap, Unsplash")
-st.sidebar.write("Modules used: Pytz for worldtime widget, Time for worldtime and timer,  HTML for static image display, postimg for picture")
+st.sidebar.write("Modules used:")
+st.sidebar.write("Pytz for worldtime widget")
+st.sidebar.write("Time for worldtime and timer")
+st.sidebar.write("HTML for static image display")
+st.sidebar.write("postimg for picture")
+
+
 
 # Get available time zones
 timezones = pytz.all_timezones
