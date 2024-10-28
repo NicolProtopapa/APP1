@@ -6,6 +6,7 @@ import requests
 from datetime import datetime, timedelta
 import pytz
 
+#import Layout Sidebar
 st.sidebar.title("Welcome to our Dashboard Project!")
 st.sidebar.write("Contributors: Nikoletta Protopapa, Christos Mattheou")
 st.sidebar.write("APIS used : OpenWeatherMap, Unsplash")
@@ -13,14 +14,14 @@ st.sidebar.write("Modules used:")
 st.sidebar.write("Pytz for worldtime widget")
 st.sidebar.write("Time for worldtime and timer")
 st.sidebar.write("HTML for static image display")
-st.sidebar.write("postimg for picture")
-
+st.sidebar.write("postimg for static picture")
 
 
 # Get available time zones
 timezones = pytz.all_timezones
 
 st.title("Please select a widget from Navigation panel to visit")
+
 # Creating the tabs
 tabs = st.tabs(["Home", "Weather", "World Time", "Timer", "Gallery"])
 
@@ -78,10 +79,11 @@ with tabs[1]:
             weather_conditions = [entry["weather"][0]["description"] for entry in entries]
             most_common_weather = max(set(weather_conditions), key=weather_conditions.count)
             
-            st.title(f"  Average Temperature: {avg_temp:.2f}°C")
-            st.title(f"  Weather: {most_common_weather.capitalize()}")
+            st.title(f"Average Temperature: {avg_temp:.2f}°C")
+            st.title(f"Weather: {most_common_weather.capitalize()}")
             st.title("")
-
+            
+   
     get_weather_forecast()
 
 with tabs [2]: 
@@ -134,6 +136,7 @@ with tabs[3]:
         
 # Content for the "Gallery" tab
     with tabs[4]:
+    
     # Random 10 image gallery generator    
         
         UNSPLASH_ACCESS_KEY = "MxrtWqPkYgMvV6KbtkEvxgBk2XVp7Nb-vZv7dsqVHIY"
